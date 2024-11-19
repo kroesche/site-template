@@ -1,0 +1,18 @@
+* text=auto
+
+Makefile text
+
+*.md diff=markdown
+*.markdown diff=markdown
+*.txt text
+*.yml text
+*.yaml text
+*.html diff=html
+*.json text
+*.css text
+*.svg text
+*.js text
+*.jinja text
+
+*.gif binary
+*.jpg binary

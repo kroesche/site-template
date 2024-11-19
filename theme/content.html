@@ -1,0 +1,19 @@
+<!-- original content.html from mkdocs theme -->
+
+{% if page.meta.source %}
+<div class="source-links">
+{% for filename in page.meta.source %}
+    <span class="label label-primary">{{ filename }}</span>
+{% endfor %}
+</div>
+{% endif %}
+
+{{ page.content }}
+
+<!-- customization to add revision date at bottom of page -->
+
+{% if page.meta.git_revision_date_localized %}
+    <small>Page date: {{ page.meta.git_revision_date_localized }}</small>
+{% else %}  <!-- fallback to mkdocs build date -->
+    <small>Built: {{ build_date_utc.strftime('%Y-%m-%d') }}</small>
+{% endif %}

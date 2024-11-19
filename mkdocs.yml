@@ -1,0 +1,40 @@
+site_name: Website Template for Mkdocs
+site_url: https://kroesche.org/template
+copyright: © 2024 Joseph Kroesche
+
+theme:
+  name: flatly
+  locale: en
+  navigation_depth: 3
+  custom_dir: theme/
+  highlightjs: false
+
+extra_css:
+  - "css/extra.css"
+  - "css/codehilite.css"
+
+markdown_extensions:
+  - extra
+    #  - markdown_captions
+  - codehilite:
+      guess_lang: false
+      use_pygments: true
+
+plugins:
+  - git-revision-date-localized:
+      type: iso_date
+      fallback_to_build_date: false
+      enable_creation_date: false
+      enabled: true  ## set to false if not using git for page source
+
+not_in_nav:
+  index.md
+
+nav:
+  - "HowTo":            # example top level topic grouping
+    - makehelp.md       # topic name is picked up from content page
+    - howto-theme.md
+  - "Cheat Sheet":
+    - howto-markdown.md
+    - howto-photos.md
+  - "Site Help": sitehelp.md  # override topic name
